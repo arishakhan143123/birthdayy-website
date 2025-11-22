@@ -1,75 +1,76 @@
+/* Global pink theme */
 body {
     margin: 0;
-    padding: 0;
     font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-    color: #333;
+    background: #ffbae3;
+    color: #822659;
     overflow-x: hidden;
 }
 
+/* Center container */
 .container {
-    max-width: 700px;
-    margin: 60px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
     text-align: center;
+    padding: 60px 20px;
 }
 
-h1 {
-    font-size: 2.6rem;
-    color: #e60073;
-}
-
-#countdown {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #6a0572;
-}
-
-.btn {
+/* Surprise & home buttons */
+.surprise-btn, .back-btn {
     display: inline-block;
-    padding: 12px 25px;
-    background: #e60073;
+    padding: 15px 30px;
+    background: #ff4fa7;
     color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 1.1rem;
+    border-radius: 10px;
+    font-size: 20px;
     margin-top: 20px;
-}
-
-.btn:hover {
-    background: #c20063;
-}
-
-.letter-full, .intro, .letter-preview {
-    font-size: 1.1rem;
-    line-height: 1.7;
-}
-
-.back {
-    display: block;
-    margin-top: 25px;
-    color: #444;
     text-decoration: none;
+    transition: 0.3s;
 }
 
-.fade-in {
-    animation: fadein 1.5s ease-in-out;
+.surprise-btn:hover, .back-btn:hover {
+    background: #ff2d92;
+    transform: scale(1.05);
 }
 
-@keyframes fadein {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Confetti Canvas */
-#confetti {
+/* Background balloons, gifts, candles */
+.background-decor {
     position: fixed;
-    top: 0;
-    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.balloons {
+    background-image: url('https://i.ibb.co/0mrP4Zt/balloons.png');
+}
+
+.gifts {
+    background-image: url('https://i.ibb.co/9WJrGd8/gifts.png');
+}
+
+.candles {
+    background-image: url('https://i.ibb.co/5rsN9bL/candles.png');
+}
+
+/* Love letter box */
+.surprise-box {
+    background: #ffe6f5;
+    border-radius: 20px;
+    padding: 35px;
+    width: 80%;
+    margin: 40px auto;
+    box-shadow: 0 0 20px #ff7acb;
+}
+
+.love-letter {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* Confetti canvas */
+#confetti-canvas {
+    position: fixed;
     width: 100%;
     height: 100%;
     pointer-events: none;
